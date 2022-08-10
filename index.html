@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <meta name="author" content="1991artem">
+        <title> Coffee shop</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js-node_modules_css-loader_dist_runtime_api_js--27510c.js"></script><script defer="defer" src="main.js"></script></head>
+    <body id="body">
+        <div class="wrapper">
+            <!-- Navigation-->
+            <nav class="navbar">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="https://elgreloo.com/food/coffee"><img src="img/coffee-logo.png" alt="Logo coffee"></a>
+                  <div class="cart">
+                    <div class="cart-count"><p>0</p></div>
+                  </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/logo_rs_text.svg" alt="logo"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="https://github.com/1991artem">My GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.linkedin.com/in/artem-puzik-797668235/">About author</a>
+                        </li>
+                        <li class="nav-item">
+                          <button class="cartReset">Reset All</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header class="header">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="slider">
+                            <div class="slider-l img-l-bg-1"></div>
+                            <div class="slider-c">
+                              <p class="s-offer-text">summer special offer</p>
+                              <h1 class="s-offer-name">LAVAZZA AROMA CLUB</h1>
+                              <div><p class="s-coffee-price">12.99$</p></div>
+                            </div>
+                            <div class="slider-r img-r-bg-1"></div>
+                        </div>
+                      </div>
+                        <div class="carousel-item">
+                          <div class="slider">
+                              <div class="slider-l img-l-bg-2"></div>
+                              <div class="slider-c">
+                                <p class="s-offer-text">summer special offer</p>
+                                <h1 class="s-offer-name">LAVAZZA PRONTISSIMO</h1>
+                                <div><p class="s-coffee-price">10.99$</p></div>
+                              </div>
+                              <div class="slider-r img-r-bg-2"></div>
+                          </div>
+                        </div>
+                          <div class="carousel-item">
+                            <div class="slider">
+                                <div class="slider-l img-l-bg-3"></div>
+                                <div class="slider-c">
+                                  <p class="s-offer-text">summer special offer</p>
+                                  <h1 class="s-offer-name">LAVAZZA AROMA E'GUSTO</h1>
+                                  <div><p class="s-coffee-price">9.99$</p></div>
+                                </div>
+                                <div class="slider-r img-r-bg-3"></div>
+                            </div>
+                          </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Следующий</span>
+                    </button>
+                  </div>
+            </div></header>
+            <main class="main">
+              <div class="filter">
+                <div class="search-place">
+                  <button type="button" class="btn-search">Quick Search</button>
+                  <input class="input-search" type="search" placeholder="type anything here..." autofocus>
+                </div>
+                <div class="filter-place">
+                  <div class="drop-filter-container">
+                    <p>Origin</p>
+                    <select class="drop-filter" name="filter-origin" id="origin"></select>
+                  </div>
+                  <div class="drop-filter-container">
+                    <p>Brand</p>
+                    <select class="drop-filter" name="filter-brand" id="brand"></select>
+                  </div>
+                  <div class="drop-filter-container">
+                    <p>Category</p>
+                    <select class="drop-filter" name="filter-category" id="category"></select>
+                  </div>
+                  <div class="drop-filter-container">
+                    <p>Strength</p>
+                    <select class="drop-filter" name="filter-strength" id="strength"></select>
+                  </div>
+                  <div class="drop-filter-container">
+                    <p>Sort by</p>
+                    <select class="drop-filter" name="filter-sort" id="sort">
+                      <option value="price_min">Price min</option>
+                      <option value="price_max">Price max</option>
+                      <option value="name_a">Name (A-Z)</option>
+                      <option value="name_z">Name (Z-A)</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="btn-reset">Filter reset</button>
+              </div>
+              <div class="price-container">
+                <div class="card-price">
+                  <p>Price</p>
+                  <div id="r-slider"></div>
+                </div>
+              </div>
+              <div class="card-container"></div>
+            </main>
+            <footer class="footer">
+              <a href="https://rs.school/"><img src="img/rs_school_js.svg" alt="RSSchool"></a>
+              <a href="https://github.com/rolling-scopes-school/1991artem-JSFE2022Q1/pull/44">Git Hub 1991artem</a>
+              <p>Created in 2022</p>
+            </footer>
+        </div>
+        <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="index.ts"></script>
+    </body>
+</html>
